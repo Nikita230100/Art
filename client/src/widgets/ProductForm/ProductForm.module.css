@@ -1,0 +1,257 @@
+.productFormContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .productFormHeader {
+    margin-bottom: 30px;
+  }
+  
+  .productFormTitle {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+  }
+  
+  .productForm {
+    background: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .formGrid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+  }
+  
+  .imageColumn {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .imageUpload {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .uploadContainer {
+    position: relative;
+    width: 100%;
+  }
+  
+  .fileInput {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
+  .uploadButton {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #808080;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .uploadButton:hover {
+    background: #000000;
+  }
+  
+  .imagePreview {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #eee;
+  }
+  
+  .imagePlaceholder {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    border-radius: 6px;
+    color: #888;
+    border: 1px dashed #ccc;
+  }
+  
+  .formColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .formGroup label {
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+  }
+  
+  .formGroup input,
+  .formGroup select,
+  .formGroup textarea {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .formGroup textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  .formRow {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .formRow .formGroup {
+    flex: 1;
+  }
+  
+  .formActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .cancelButton {
+    padding: 10px 20px;
+    background: #f5f5f5;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .cancelButton:hover {
+    background: #e0e0e0;
+  }
+  
+  .submitButton {
+    padding: 10px 20px;
+    background: #808080;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .submitButton:hover {
+    background: #000000;
+  }
+  
+  .submitButton:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .errorText {
+    color: #f44336;
+    font-size: 13px;
+    margin-top: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .formGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .formRow {
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .imagePreview,
+    .imagePlaceholder {
+      height: 250px;
+    }
+  }
+
+.colorPickerContainer {
+  margin-top: 10px;
+}
+
+.colorPalette {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+  gap: 8px;
+  padding: 10px;
+  background: #f8f8f8;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+
+.colorRectangle {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: auto
+}
+.colorRectangle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.colorRectangle.selected {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 2px #4a76a8;
+}
+
+.checkIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .colorPalette {
+    grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
+    gap: 6px;
+  }
+
+  .colorRectangle {
+    width: 25px;
+    height: 25px;
+  }
+}

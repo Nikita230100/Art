@@ -1,0 +1,66 @@
+.signin-buyer-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.signin-buyer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.signin-buyer-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.signin-buyer-label {
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+}
+
+.signin-buyer-input {
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.signin-buyer-input:focus {
+  outline: none;
+  border-color: #808080;
+}
+
+.signin-buyer-button {
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #808080;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signin-buyer-button:hover {
+  background-color: #000;
+}
+
+.signin-buyer-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.signin-buyer-error {
+  color: #ff3333;
+  font-size: 14px;
+  margin-top: 4px;
+}

@@ -1,0 +1,120 @@
+.product-card {
+  width: 338px;
+  height: 450px;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  padding: 0px;
+  margin: 5px;
+}
+
+.product-image-container1 {
+  cursor: pointer;
+  height: 450px;
+}
+
+.product-image1 {
+  height: 450px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.product-image1:hover {
+  transform: scale(1.04);
+  filter: brightness(1.04);
+
+  filter: grayscale(80%);
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.product-image1:not(:hover) {
+  transform: scale(1);
+  filter: grayscale(0%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.product-info {
+  position: absolute;
+  bottom: 45px;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.5s ease;
+  backdrop-filter: blur(5px);
+  height: 90px;
+}
+
+.product-info.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.product-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.product-price1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  right: 25px;
+  bottom: 25px;
+  position: absolute;
+}
+
+.product-actions {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  height: 45px;
+}
+
+.action-button {
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: background 0.2s ease;
+  padding: 0;
+}
+
+.action-button:hover {
+  background: rgba(221, 221, 221, 0.9);
+}
+
+.buy-button {
+  flex: 1;
+  font-size: 1.1rem;
+  width: 305px;
+  margin-right: -10px;
+  font-weight: 500;
+}
+
+.wishlist-button {
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #000;
+}

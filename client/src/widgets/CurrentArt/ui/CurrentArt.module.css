@@ -1,0 +1,196 @@
+.artPageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.colorPalette {
+  background-color: #fff; 
+  border: 1px solid #eee; 
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); 
+}
+
+.colorPalette h3 {
+  font-size: 1.2em;
+  margin-bottom: 12px;
+  color: #333; 
+}
+
+.colorContainer {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 8px; 
+}
+
+.colorSwatch {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative; 
+  overflow: hidden; 
+}
+
+.colorSwatch:hover .colorTooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.colorTooltip {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 0.8em;
+  text-align: center;
+  padding: 4px;
+  border-radius: 4px;
+  opacity: 0; 
+  transform: translateY(100%);
+  transition: all 0.2s ease-in-out;
+}
+
+.artPage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+}
+
+.artPageLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.artImage {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.artPageRight {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.artTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.artDescription {
+  h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #495057;
+  }
+  
+  p {
+    line-height: 1.6;
+    color: #6c757d;
+    margin: 0;
+  }
+}
+
+.artDetails {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  
+  p {
+    margin: 0;
+    font-size: 16px;
+    
+    strong {
+      color: #333;
+      font-weight: 500;
+    }
+  }
+
+ 
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.backButton {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  
+  button {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 16px;
+    
+    &:hover {
+      background-color: #e0e0e0;
+      border-color: #ccc;
+    }
+  }
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 30px;
+  font-size: 18px;
+  color: #6c757d;
+}
+
+.error {
+  color: #ff5252;
+}
+
+@media (max-width: 576px) {
+  .artPageContainer {
+    padding: 15px;
+  }
+  
+  .artTitle {
+    font-size: 20px;
+  }
+  
+  .artDescription h3 {
+    font-size: 16px;
+  }
+  
+  .artDetails {
+    gap: 10px;
+    
+    p {
+      font-size: 14px;
+    }
+  }
+  
+  .backButton button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

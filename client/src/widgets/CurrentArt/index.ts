@@ -1,0 +1,1 @@
+export { CurrentArt} from "./ui/CurrentArt";

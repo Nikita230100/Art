@@ -1,0 +1,23 @@
+{
+  "development": {
+    "use_env_variable": "DB",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": false  
+    }
+  },
+  "test": {
+    "use_env_variable": "DB",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": false
+    }
+  },
+  "production": {
+    "use_env_variable": "DB",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": false
+    }
+  }
+}
